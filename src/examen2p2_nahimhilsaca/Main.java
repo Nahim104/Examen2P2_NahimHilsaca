@@ -4,6 +4,9 @@
  */
 package examen2p2_nahimhilsaca;
 
+import java.io.File;
+import java.util.ArrayList;
+
 /**
  *
  * @author nahim
@@ -26,21 +29,91 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        ta_username = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        ta_contrasenia = new javax.swing.JTextArea();
+        js_edad = new javax.swing.JSpinner();
+        crearusuario = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(204, 255, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setBackground(new java.awt.Color(0, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Rockwell Condensed", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 51, 255));
+        jLabel1.setText("                            Registrarse");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 390, 70));
+
+        jLabel2.setBackground(new java.awt.Color(255, 0, 102));
+        jLabel2.setForeground(new java.awt.Color(255, 102, 204));
+        jLabel2.setText("                             Username");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 210, 70));
+
+        ta_username.setColumns(20);
+        ta_username.setRows(5);
+        jScrollPane1.setViewportView(ta_username);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 110, 220, 90));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI Historic", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 0, 153));
+        jLabel3.setText("                            Edad");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 220, 90));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI Historic", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 0, 204));
+        jLabel4.setText("                        Contraseña");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 220, 110));
+
+        ta_contrasenia.setColumns(20);
+        ta_contrasenia.setRows(5);
+        jScrollPane2.setViewportView(ta_contrasenia);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 220, 90));
+
+        js_edad.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jPanel1.add(js_edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, 220, 80));
+
+        crearusuario.setText("Crear Usuario");
+        crearusuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crearusuarioMouseClicked(evt);
+            }
+        });
+        jPanel1.add(crearusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 570, 210, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1059, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 749, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void crearusuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearusuarioMouseClicked
+        usuarios.add(new Cliente(ta_username.getText(), ta_contrasenia.getText(), (int)js_edad.getValue()));
+        
+      
+        
+        
+        
+        
+     
+    }//GEN-LAST:event_crearusuarioMouseClicked
 
     /**
      * @param args the command line arguments
@@ -78,5 +151,20 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton crearusuario;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSpinner js_edad;
+    private javax.swing.JTextArea ta_contrasenia;
+    private javax.swing.JTextArea ta_username;
     // End of variables declaration//GEN-END:variables
+
+    ArrayList< Usuario> usuarios;
+
+
 }

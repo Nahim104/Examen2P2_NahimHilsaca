@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Artista extends Usuario {
     
     private String num_artistico;
-    private ArrayList <Cancion> canciones_plataforma;
+    private ArrayList <Cancion> canciones_subidas;
     private ArrayList <Album> albumes_publicados;
 
     public Artista(String username, String contrasena, int edad) {
@@ -36,13 +36,17 @@ public class Artista extends Usuario {
         this.num_artistico = num_artistico;
     }
 
-    public ArrayList<Cancion> getCanciones() {
-        return canciones;
+    public ArrayList<Cancion> getCanciones_subidas() {
+        return canciones_subidas;
     }
 
-    public void setCanciones(ArrayList<Cancion> canciones) {
-        this.canciones = canciones;
+    public void setCanciones_subidas(ArrayList<Cancion> canciones_subidas) {
+        this.canciones_subidas = canciones_subidas;
     }
+
+    
+
+    
 
     public ArrayList<Album> getAlbumes_publicados() {
         return albumes_publicados;
@@ -54,7 +58,7 @@ public class Artista extends Usuario {
 
     @Override
     public String toString() {
-        return "Artista" + super.toString()+ "num_artistico=" + num_artistico + ", canciones=" + canciones + ", albumes_publicados=" + albumes_publicados ;
+        return "Artista" + super.toString()+ "num_artistico=" + num_artistico + ", canciones=" + canciones_subidas + ", albumes_publicados=" + albumes_publicados ;
     }
     
     
