@@ -97,6 +97,12 @@ public class Main extends javax.swing.JFrame {
         DialogCliente = new javax.swing.JDialog();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        jtreelista = new javax.swing.JTree();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jtreecancionpreferida = new javax.swing.JList<>();
+        jScrollPane16 = new javax.swing.JScrollPane();
+        jlistcoladereproduccion = new javax.swing.JList<>();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -438,15 +444,36 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)
         );
 
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Lista de Reproduccion");
+        jtreelista.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane14.setViewportView(jtreelista);
+
+        jScrollPane15.setViewportView(jtreecancionpreferida);
+
+        jScrollPane16.setViewportView(jlistcoladereproduccion);
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 943, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66)
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
+                .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(79, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 548, Short.MAX_VALUE)
+                    .addComponent(jScrollPane15)
+                    .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Escuchar Canciones", jPanel8);
@@ -805,6 +832,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
+    private javax.swing.JScrollPane jScrollPane16;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -818,10 +848,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JList<String> jlistcoladereproduccion;
     private javax.swing.JSpinner js_duracion;
     private javax.swing.JSpinner js_edad;
     private javax.swing.JSpinner js_edadcliente;
     private javax.swing.JTree jtree_lanzamiento;
+    private javax.swing.JList<String> jtreecancionpreferida;
+    private javax.swing.JTree jtreelista;
     private javax.swing.JPanel panelUsuario;
     private javax.swing.JPanel panelUsuario1;
     private javax.swing.JRadioButton radiobuttonalbum;
