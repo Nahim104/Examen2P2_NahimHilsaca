@@ -18,6 +18,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 import javax.tools.FileObject;
 
 /**
@@ -347,6 +349,11 @@ public class Main extends javax.swing.JFrame {
         jScrollPane13.setViewportView(jtree_lanzamiento);
 
         jButton4.setText("Refrescar Lanzamientos");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -664,6 +671,19 @@ public class Main extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_radiobuttonalbumMouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+           DefaultTreeModel modelo = (DefaultTreeModel) jtree_lanzamiento.getModel();
+        
+        for (Lanzamiento Lanza : lanzamientos) {
+            DefaultMutableTreeNode referencia = ((DefaultMutableTreeNode) ((DefaultMutableTreeNode) modelo.getRoot()).getChildAt(0));
+            DefaultMutableTreeNode nodo = new DefaultMutableTreeNode(Lanza);
+            for (Cancion cancion : canciones) {
+                nodo.add(new DefaultMutableTreeNode(cancion));
+            }
+            referencia.add(nodo);
+        }
+    }//GEN-LAST:event_jButton4MouseClicked
 
     /**
      * @param args the command line arguments
