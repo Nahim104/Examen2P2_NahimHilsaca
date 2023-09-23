@@ -25,9 +25,10 @@ public class Artista extends Usuario {
         this.num_artistico = num_artistico;
     }
 
+    public Artista() {
+        super();
+    }
     
-    
-
     public String getNum_artistico() {
         return num_artistico;
     }

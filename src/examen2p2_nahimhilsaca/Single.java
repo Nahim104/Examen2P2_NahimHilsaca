@@ -12,6 +12,7 @@ public class Single extends Lanzamiento {
     private Cancion cancion_single;
 
     public Single() {
+        super();
     }
 
     public Single(Cancion cancion_single, String titulo_publicacion, String fecha_lanzamiento, int cont_likes) {

@@ -20,6 +20,12 @@ public class Cliente extends Usuario{
         super(username, contrasena, edad);
     }
 
+    public Cliente() {
+        super();
+    }
+    
+    
+
     public ArrayList<Cancion> getCanciones_favoritas() {
         return canciones_favoritas;
     }

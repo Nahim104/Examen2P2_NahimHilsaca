@@ -10,18 +10,21 @@ import java.util.ArrayList;
  *
  * @author nahim
  */
-public class Album  extends Lanzamiento{
+public class Album extends Lanzamiento{
     
     private int cant_canciones;
     private ArrayList <Cancion> canciones_album;
 
     public Album() {
+        super();
     }
 
     public Album(int cant_canciones, String titulo_publicacion, String fecha_lanzamiento, int cont_likes) {
         super(titulo_publicacion, fecha_lanzamiento, cont_likes);
         this.cant_canciones = cant_canciones;
     }
+    
+    
 
     public int getCant_canciones() {
         return cant_canciones;
