@@ -94,6 +94,9 @@ public class Main extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         cb_edad = new javax.swing.JSpinner();
         jButton1 = new javax.swing.JButton();
+        DialogCliente = new javax.swing.JDialog();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel8 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -435,6 +438,36 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)
         );
 
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 943, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 650, Short.MAX_VALUE)
+        );
+
+        jTabbedPane3.addTab("Escuchar Canciones", jPanel8);
+
+        javax.swing.GroupLayout DialogClienteLayout = new javax.swing.GroupLayout(DialogCliente.getContentPane());
+        DialogCliente.getContentPane().setLayout(DialogClienteLayout);
+        DialogClienteLayout.setHorizontalGroup(
+            DialogClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DialogClienteLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 943, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(99, Short.MAX_VALUE))
+        );
+        DialogClienteLayout.setVerticalGroup(
+            DialogClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DialogClienteLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 681, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -629,7 +662,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_crearusuarioMouseClicked
 
     private void crearsingleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearsingleMouseClicked
-        
+           
     }//GEN-LAST:event_crearsingleMouseClicked
 
     private void crearalbumMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearalbumMouseClicked
@@ -682,6 +715,7 @@ public class Main extends javax.swing.JFrame {
                 nodo.add(new DefaultMutableTreeNode(cancion));
             }
             referencia.add(nodo);
+           
         }
     }//GEN-LAST:event_jButton4MouseClicked
 
@@ -721,6 +755,7 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog DialogCliente;
     private javax.swing.JDialog DialogGUIArtistasClientes;
     private javax.swing.JDialog DialogLogin;
     private javax.swing.JComboBox<String> cb_album;
@@ -764,6 +799,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
@@ -779,6 +815,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JSpinner js_duracion;
