@@ -4,11 +4,13 @@
  */
 package examen2p2_nahimhilsaca;
 
+import java.io.Serializable;
+
 /**
  *
  * @author nahim
  */
-public class Usuario {
+public class Usuario implements Serializable {
     private String username;
     private String contrasena;
     private int edad;

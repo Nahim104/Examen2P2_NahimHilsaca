@@ -23,6 +23,13 @@ public class Cancion {
         this.referencia_album_single = referencia_album_single;
     }
 
+    public Cancion(String titulo, double tiempo_duracion) {
+        this.titulo = titulo;
+        this.tiempo_duracion = tiempo_duracion;
+    }
+    
+    
+
     public String getTitulo() {
         return titulo;
     }

@@ -1,6 +1,128 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JDialog" name="DialogGUIArtistasClientes">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="jTabbedPane2" min="-2" pref="1056" max="-2" attributes="0"/>
+                  <EmptySpace pref="49" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="jTabbedPane2" min="-2" pref="749" max="-2" attributes="0"/>
+                  <EmptySpace pref="54" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JTabbedPane" name="jTabbedPane2">
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel3">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Crear Cancion">
+                    <Property name="tabTitle" type="java.lang.String" value="Crear Cancion"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabel12" pref="298" max="32767" attributes="0"/>
+                              <Component id="jLabel11" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jScrollPane6" max="32767" attributes="0"/>
+                              <Component id="js_duracion" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="335" max="-2" attributes="0"/>
+                          <Component id="crearcancion" min="-2" pref="286" max="-2" attributes="0"/>
+                          <EmptySpace pref="435" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jScrollPane6" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel12" min="-2" pref="91" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabel11" max="32767" attributes="0"/>
+                              <Component id="js_duracion" pref="97" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+                          <Component id="crearcancion" min="-2" pref="119" max="-2" attributes="0"/>
+                          <EmptySpace pref="297" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel12">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nombre de la Cancion"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane6">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="ta_nomcancion">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="rows" type="int" value="5"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="jLabel11">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tiempo de Duracion"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JSpinner" name="js_duracion">
+                </Component>
+                <Component class="javax.swing.JButton" name="crearcancion">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Crear Cancion"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="crearcancionMouseClicked"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -23,17 +145,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="panelUsuario" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="panelUsuario" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="panelUsuario">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="ff" red="cc" type="rgb"/>
@@ -169,10 +291,31 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="crearusuarioMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="crearusuarioActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="430" y="570" width="210" height="80"/>
+              <AbsoluteConstraints x="420" y="490" width="210" height="80"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Posee ya un Usuario?Haga click en Login:"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="70" y="660" width="270" height="110"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Login"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="680" y="670" width="210" height="80"/>
             </Constraint>
           </Constraints>
         </Component>

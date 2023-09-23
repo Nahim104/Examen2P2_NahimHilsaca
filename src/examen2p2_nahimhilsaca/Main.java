@@ -4,8 +4,14 @@
  */
 package examen2p2_nahimhilsaca;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.DefaultComboBoxModel;
 
 /**
  *
@@ -29,7 +35,16 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        DialogGUIArtistasClientes = new javax.swing.JDialog();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        ta_nomcancion = new javax.swing.JTextArea();
+        jLabel11 = new javax.swing.JLabel();
+        js_duracion = new javax.swing.JSpinner();
+        crearcancion = new javax.swing.JButton();
+        panelUsuario = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -40,47 +55,117 @@ public class Main extends javax.swing.JFrame {
         ta_contrasenia = new javax.swing.JTextArea();
         js_edad = new javax.swing.JSpinner();
         crearusuario = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+
+        jLabel12.setText("Nombre de la Cancion");
+
+        ta_nomcancion.setColumns(20);
+        ta_nomcancion.setRows(5);
+        jScrollPane6.setViewportView(ta_nomcancion);
+
+        jLabel11.setText("Tiempo de Duracion");
+
+        crearcancion.setText("Crear Cancion");
+        crearcancion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crearcancionMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane6)
+                    .addComponent(js_duracion))
+                .addGap(81, 81, 81))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(335, 335, 335)
+                .addComponent(crearcancion, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(435, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(js_duracion, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE))
+                .addGap(102, 102, 102)
+                .addComponent(crearcancion, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(297, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Crear Cancion", jPanel3);
+
+        javax.swing.GroupLayout DialogGUIArtistasClientesLayout = new javax.swing.GroupLayout(DialogGUIArtistasClientes.getContentPane());
+        DialogGUIArtistasClientes.getContentPane().setLayout(DialogGUIArtistasClientesLayout);
+        DialogGUIArtistasClientesLayout.setHorizontalGroup(
+            DialogGUIArtistasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DialogGUIArtistasClientesLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1056, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(49, Short.MAX_VALUE))
+        );
+        DialogGUIArtistasClientesLayout.setVerticalGroup(
+            DialogGUIArtistasClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DialogGUIArtistasClientesLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 0));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panelUsuario.setBackground(new java.awt.Color(204, 255, 0));
+        panelUsuario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(0, 255, 255));
         jLabel1.setFont(new java.awt.Font("Rockwell Condensed", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 255));
         jLabel1.setText("                            Registrarse");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 390, 70));
+        panelUsuario.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 390, 70));
 
         jLabel2.setBackground(new java.awt.Color(255, 0, 102));
         jLabel2.setForeground(new java.awt.Color(255, 102, 204));
         jLabel2.setText("                             Username");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 210, 70));
+        panelUsuario.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 210, 70));
 
         ta_username.setColumns(20);
         ta_username.setRows(5);
         jScrollPane1.setViewportView(ta_username);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 110, 220, 90));
+        panelUsuario.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 110, 220, 90));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Historic", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 0, 153));
         jLabel3.setText("                            Edad");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 220, 90));
+        panelUsuario.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 220, 90));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Historic", 0, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(204, 0, 204));
         jLabel4.setText("                        Contraseña");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 220, 110));
+        panelUsuario.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 220, 110));
 
         ta_contrasenia.setColumns(20);
         ta_contrasenia.setRows(5);
         jScrollPane2.setViewportView(ta_contrasenia);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 220, 90));
+        panelUsuario.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 220, 90));
 
         js_edad.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
-        jPanel1.add(js_edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, 220, 80));
+        panelUsuario.add(js_edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, 220, 80));
 
         crearusuario.setText("Crear Usuario");
         crearusuario.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,17 +173,28 @@ public class Main extends javax.swing.JFrame {
                 crearusuarioMouseClicked(evt);
             }
         });
-        jPanel1.add(crearusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 570, 210, 80));
+        crearusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearusuarioActionPerformed(evt);
+            }
+        });
+        panelUsuario.add(crearusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 490, 210, 80));
+
+        jLabel5.setText("Posee ya un Usuario?Haga click en Login:");
+        panelUsuario.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 660, 270, 110));
+
+        jButton2.setText("Login");
+        panelUsuario.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 670, 210, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -107,13 +203,19 @@ public class Main extends javax.swing.JFrame {
     private void crearusuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearusuarioMouseClicked
         usuarios.add(new Cliente(ta_username.getText(), ta_contrasenia.getText(), (int)js_edad.getValue()));
         
-      
-        
         
         
         
      
     }//GEN-LAST:event_crearusuarioMouseClicked
+
+    private void crearusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearusuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_crearusuarioActionPerformed
+
+    private void crearcancionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearcancionMouseClicked
+       canciones.add(new Cancion(ta_nomcancion.getText(), (int)js_duracion.getValue()));
+    }//GEN-LAST:event_crearcancionMouseClicked
 
     /**
      * @param args the command line arguments
@@ -151,20 +253,35 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog DialogGUIArtistasClientes;
+    private javax.swing.JButton crearcancion;
     private javax.swing.JButton crearusuario;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JSpinner js_duracion;
     private javax.swing.JSpinner js_edad;
+    private javax.swing.JPanel panelUsuario;
     private javax.swing.JTextArea ta_contrasenia;
+    private javax.swing.JTextArea ta_nomcancion;
     private javax.swing.JTextArea ta_username;
     // End of variables declaration//GEN-END:variables
 
     ArrayList< Usuario> usuarios;
+    ArrayList <Lanzamiento> lanzamientos;
+    
+    ArrayList <Cancion> canciones;
+    
 
 
 }
