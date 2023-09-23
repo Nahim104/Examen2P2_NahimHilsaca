@@ -104,7 +104,6 @@ public class Main extends javax.swing.JFrame {
         jScrollPane16 = new javax.swing.JScrollPane();
         jlistcoladereproduccion = new javax.swing.JList<>();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         panelUsuario = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -497,19 +496,6 @@ public class Main extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1092, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 790, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Crear Cliente", jPanel5);
-
         panelUsuario.setBackground(new java.awt.Color(204, 255, 0));
         panelUsuario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -578,14 +564,13 @@ public class Main extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1092, Short.MAX_VALUE)
             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                    .addContainerGap(73, Short.MAX_VALUE)
-                    .addComponent(panelUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 946, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(73, Short.MAX_VALUE)))
+                .addGroup(jPanel6Layout.createSequentialGroup()
+                    .addComponent(panelUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 1019, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 73, Short.MAX_VALUE)))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 790, Short.MAX_VALUE)
+            .addGap(0, 782, Short.MAX_VALUE)
             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -685,6 +670,10 @@ public class Main extends javax.swing.JFrame {
 
     private void crearusuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearusuarioMouseClicked
         usuarios.add(new Cliente(ta_usercliente.getText(), ta_contracliente.getText(), (int)js_edadcliente.getValue()));
+        DialogCliente.pack();
+        DialogCliente.setModal(true);
+        DialogCliente.setLocationRelativeTo(this);
+        DialogCliente.setVisible(true);
         
     }//GEN-LAST:event_crearusuarioMouseClicked
 
@@ -823,7 +812,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
